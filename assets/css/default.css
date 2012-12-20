@@ -2,6 +2,10 @@
 	background-color: #000000;
 }
 
+.container{
+	margin-top: 10px;
+}
+
 .table-bordered{
 	border-color: #000000;
 	margin: 5px;
@@ -16,23 +20,26 @@
 	margin-top: 15px;
 }
 
-#rules{
-	color: #ffffff;
-	text-decoration: underline;
-}
-
 .content{
 	padding: 15px;
 	margin-top: 6px;
 	background-color: #ffffff;
-	border-bottom-right-radius:3px; 
-	border-bottom-left-radius:3px;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
+	border-bottom-right-radius:5px; 
+	border-bottom-left-radius:5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 }
 
 .rules{
 	text-align: left;
+}
+
+.spacer{
+	height:15px;
+}
+
+a{
+	text-decoration: 
 }
 
 ul{
