@@ -43,66 +43,24 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td><div class="row v-center">1</div></td>
-						<td><div class="v-center"><a href="http://www.kickstarter.com/projects/1454393454/jezzpaul">JezzPaul</a></div><div class="v-center"><img src="assets/images/olin.png"/></div></td>
-						<td><div class="row v-center">$4/$1000</div>
-							<div class="row pagination-centered"><img src="assets/images/ks.png"/></div>
-						</td>
-						<td class="hidden-phone">
-							<div class="v-center">.4%</div>
-						</td>
-					</tr>
-					<tr>
-						<td><div class="row v-center">2</div></td>
-						<td><div class="v-center"><a href="http://www.indiegogo.com/laptopbookmarks">Laptop Bookmarks</a></div><div class="v-center"><img src="assets/images/mit.png"/></div></td>
-						<td><div class="row v-center">$28/$5000</div>
-							<div class="row v-center"><img src="assets/images/ig.png"/></div>
-						</td>
-						<td class="hidden-phone">
-							<div class="v-center">.56%</div>
-						</td>
-					</tr>
-					<tr>
-						<td><div class="row v-center">3</div></td>
-						<td><div class="v-center"><a href="http://www.kickstarter.com/projects/1454393454/jezzpaul">JezzPaul</a></div><div class="v-center"><img src="assets/images/olin.png"/></div></td>
-						<td><div class="row v-center">$4/$1000</div>
-							<div class="row pagination-centered"><img src="assets/images/ks.png"/></div>
-						</td>
-						<td class="hidden-phone">
-							<div class="v-center">.4%</div>
-						</td>
-					</tr>
-					<tr>
-						<td><div class="row v-center">4</div></td>
-						<td><div class="v-center"><a href="http://www.indiegogo.com/laptopbookmarks">Laptop Bookmarks</a></div><div class="v-center"><img src="assets/images/mit.png"/></div></td>
-						<td><div class="row v-center">$28/$5000</div>
-							<div class="row v-center"><img src="assets/images/ig.png"/></div>
-						</td>
-						<td class="hidden-phone">
-							<div class="v-center">.56%</div>
-						</td>
-					</tr>
-					<tr>
-						<td><div class="row v-center">5</div></td>
-						<td><div class="v-center"><a href="http://www.kickstarter.com/projects/1454393454/jezzpaul">JezzPaul</a></div><div class="v-center"><img src="assets/images/olin.png"/></div></td>
-						<td><div class="row v-center">$4/$1000</div>
-							<div class="row pagination-centered"><img src="assets/images/ks.png"/></div>
-						</td>
-						<td class="hidden-phone">
-							<div class="v-center">.4%</div>
-						</td>
-					</tr>
-					<tr>
-						<td><div class="row v-center">6</div></td>
-						<td><div class="v-center"><a href="http://www.indiegogo.com/laptopbookmarks">Laptop Bookmarks</a></div><div class="v-center"><img src="assets/images/mit.png"/></div></td>
-						<td><div class="row v-center">$28/$5000</div>
-							<div class="row v-center"><img src="assets/images/ig.png"/></div>
-						</td>
-						<td class="hidden-phone">
-							<div class="v-center">.56%</div>
-						</td>
-					</tr>
+					<% entrants.forEach(function(entrant){ %>
+   						 <tr>
+							<td><div class="row v-center"><%= entrant.currentRank %></div></td>
+							<% if (entrant.platform == "kickstarter"){ 
+								var url = "http://www.kickstarter.com/" + entrant.url;}
+								else{
+									var url = "http://www.indiegogo.com/" + entrant.url;
+								}
+								%>
+							<td><div class="v-center"><a href="<%= url %>" ><%= entrant.teamName %></a></div><div class="v-center"><img src= <%= "assets/images/" + entrant.school + ".png" %> /></div></td>
+							<td><div class="row v-center">$<%= entrant.amountRaised %>/$<%= entrant.goal %></div>
+								<div class="row pagination-centered"><img src= <%= "assets/images/" + entrant.platform + ".png" %> /></div>
+							</td>
+							<td class="hidden-phone">
+								<div class="v-center"><%= ((entrant.amountRaised/entrant.goal)*100).toFixed(2) %>%</div>
+							</td>
+						</tr>
+  					<% }) %>
 				</tbody>
 			</table>
 		</div>	
