@@ -56,7 +56,6 @@
 				</thead>
 				<tbody>
 				<% entrants.sort(function(a,b){return b.amountRaised - a.amountRaised}); %>
-				<%= entrants[0].teamName %>
 					<% var i = 0 %>
 					<% entrants.forEach(function(entrant){ %>
 						<% ++i %>
