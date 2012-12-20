@@ -1,14 +1,30 @@
 {
-  "name": "Founder's Journey Contest",
+  "name": "FJChallenge",
   "version": "0.0.1",
-  "engines": {
+  "description": "A website",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "engines":{
     "node": "0.8.x",
     "npm": "1.1.x"
   },
   "dependencies": {
-    "express": "3.x",
-    "ejs" : "0.8.x",
-    "mongodb" "1.2.x": ,
-    "scrapi" "0.0.x": 
-  }
+    "scrapi": "~0.0.8",
+    "mongodb": "~1.2.6",
+    "express": "~3.0.5",
+    "ejs": "~0.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/EvanSimpson/FJXKAYAK.git"
+  },
+  "author": "Evan Simpson",
+  "license": "BSD",
+  "readmeFilename": "README.md"
 }
