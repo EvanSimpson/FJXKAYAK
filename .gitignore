@@ -3,6 +3,7 @@
 *.ico
 
 node_modules/
+test/
 
 
 *.7z
