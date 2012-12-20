@@ -114,8 +114,8 @@ MongoClient.connect("mongodb://test:prod_test@ds045637.mongolab.com:45637/heroku
 
 
 	app.listen(port);
+	setInterval(updateAll,10000);
 	updateAll();
-
 
 });
 

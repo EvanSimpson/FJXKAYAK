@@ -39,7 +39,6 @@
 			<div class="row top-padded">
 				<div class="span4 v-center"><h1><a class="btn" href="rules">Information</a></h1></div>
 				<div class="span4 ">
-				<h2>Sponsored by </h2><a href="http://www.kayak.com/"><img src="/assets/images/kayak-logo.png" /></a>
 				</div>
 			</div>
 		</header>
@@ -56,9 +55,13 @@
 					</tr>
 				</thead>
 				<tbody>
+				<% entrants.sort(function(a,b){return b.amountRaised - a.amountRaised}); %>
+				<%= entrants[0].teamName %>
+					<% var i = 0 %>
 					<% entrants.forEach(function(entrant){ %>
+						<% ++i %>
    						 <tr>
-							<td><div class="row v-center"><%= entrant.currentRank %></div></td>
+							<td><div class="row v-center"><%= i %></div></td>
 							<% if (entrant.platform == "kickstarter"){ 
 								var url = "http://www.kickstarter.com/" + entrant.url;}
 								else{
