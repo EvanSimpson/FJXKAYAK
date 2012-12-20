@@ -1,4 +1,4 @@
-var PORT = 20808;
+var port = process.env.PORT || 3000;
 var express = require("express");
 var scrapi = require('scrapi');
 var MongoClient = require('mongodb').MongoClient;
