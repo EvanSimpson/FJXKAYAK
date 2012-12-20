@@ -78,4 +78,4 @@ app.get("/rules", function(req, res){
 });
 
 
-app.listen(PORT);
+app.listen(port);
