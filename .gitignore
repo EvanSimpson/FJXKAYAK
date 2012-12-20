@@ -1,6 +1,4 @@
-*.png
 *.log
-*.ico
 
 node_modules/
 test/
