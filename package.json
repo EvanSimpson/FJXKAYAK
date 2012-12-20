@@ -1,0 +1,14 @@
+{
+  "name": "Founder's Journey Contest",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "3.x",
+    "ejs" : "0.8.x",
+    "mongodb" "1.2.x": ,
+    "scrapi" "0.0.x": 
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  }
+}
