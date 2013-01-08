@@ -61,11 +61,13 @@ MongoClient.connect("mongodb://test:prod_test@ds045637.mongolab.com:45637/heroku
 	var updateAll = function(){
 		  collection.find().sort({currentPosition:1}).toArray(function(err, items) {
 		  	items.forEach(function(item){
-		  		if (item.platform == "kickstarter"){
-		  			scrapeKick(item.url, item._id);
-		  		}
-		  		else{
-		  			scrapeIndie(item.url, item._id);
+		  		if (item.launched == "y"){
+		  			if (item.platform == "kickstarter"){
+		  				scrapeKick(item.url, item._id);
+		  			}
+		  			else{
+		  				scrapeIndie(item.url, item._id);
+		  			}
 		  		}
 		  	}, this);
   		});

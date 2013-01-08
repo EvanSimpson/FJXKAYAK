@@ -68,7 +68,13 @@
 								}
 								%>
 							<td><div class="v-center"><a href="<%= url %>" ><%= entrant.teamName %></a></div><div class="v-center"><img src= <%= "assets/images/" + entrant.school + ".png" %> /></div></td>
-							<td><div class="row v-center">$<%= entrant.amountRaised %>/$<%= entrant.goal %></div>
+							<td><div class="row v-center">
+								<%if (entrant.launched == "n"){ 
+									var money = "N/A";}
+								else{
+									var money = "$"+entrant.amountRaised +"/$" + entrant.goal;}
+								%>
+									<%= money %> </div>
 								<div class="row pagination-centered"><img src= <%= "assets/images/" + entrant.platform + ".png" %> /></div>
 							</td>
 							<td class="hidden-phone">
