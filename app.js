@@ -39,7 +39,7 @@ var indiegogo = scrapi(igManifest);
 var kickstarter = scrapi(ksManifest);
 
 
-MongoClient.connect("mongodb://test:prod_test@ds045637.mongolab.com:45637/heroku_app10224439", function(err, db) {
+MongoClient.connect(process.env.MONGO_URI, function(err, db) {
   if(err) { return console.dir(err); }
 
   var collection = db.collection('contestants');
